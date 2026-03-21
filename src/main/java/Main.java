@@ -2,12 +2,12 @@ import java.util.*;
 
 public class Main {
 
-    // ✅ Method 1: calculate single item total
+    //Method 1-calculate single item total
     public static double calculateItemTotal(double price, int quantity) {
         return price * quantity;
     }
 
-    // ✅ Method 2: calculate cart total
+    //Method 2-calculate cart total
     public static double calculateCartTotal(double[] prices, int[] quantities) {
         double total = 0;
         for (int i = 0; i < prices.length; i++) {
@@ -16,7 +16,7 @@ public class Main {
         return total;
     }
 
-    // ✅ Method 3: get locale (testable!)
+    //Method 3-get locale
     public static Locale getLocale(int choice) {
         return switch (choice) {
             case 2 -> new Locale("fi", "FI");
