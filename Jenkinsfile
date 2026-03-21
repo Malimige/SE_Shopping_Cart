@@ -11,7 +11,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/Malimige/SE_Shopping_Cart.git'
+                git branch: 'main', url: 'https://github.com/Malimige/SE_Shopping_Cart.git'
             }
         }
 
