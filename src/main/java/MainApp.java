@@ -10,7 +10,7 @@ public class MainApp extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/main.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 400, 300);
 
-        stage.setTitle("Shopping Cart");
+        stage.setTitle("Roshini Fernando / Shopping Cart App");
         stage.setScene(scene);
         stage.show();
     }
