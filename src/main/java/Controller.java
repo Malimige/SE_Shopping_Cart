@@ -54,7 +54,7 @@ public class Controller {
             bundle = new PropertyResourceBundle(reader);
 
             // Apply to UI
-            itemsField.setPromptText("Enter number of items"); // ✅ NEW
+            itemsField.setPromptText(bundle.getString("enter_items")); // 
             priceField.setPromptText(bundle.getString("enter_price"));
             quantityField.setPromptText(bundle.getString("enter_quantity"));
             calculateButton.setText(bundle.getString("calculate"));
