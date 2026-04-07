@@ -1,21 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml"
+<VBox spacing="10" alignment="TOP_LEFT" xmlns:fx="http://javafx.com/fxml"
       fx:controller="Controller">
+    <padding>
+        <Insets top="15" right="15" bottom="15" left="15"/>
+    </padding>
 
+    <Label fx:id="selectLanguageLabel" text="Select the language:"/>
     <ComboBox fx:id="languageBox" onAction="#handleLanguageChange"/>
+    <Button fx:id="confirmButton" text="Confirm Language" onAction="#handleConfirmLanguage"/>
 
-    <!-- ✅ NEW FIELD -->
-    <TextField fx:id="itemsField" promptText="Enter number of items"/>
+    <Label fx:id="itemNumberLabel" text="Item Number:"/>
+    <TextField fx:id="itemNumberField" promptText="Item Number"/>
 
-    <TextField fx:id="priceField" promptText="Enter price"/>
-    <TextField fx:id="quantityField" promptText="Enter quantity"/>
+    <Label fx:id="priceLabel" text="Price:"/>
+    <TextField fx:id="priceField" promptText="Price"/>
 
-    <Button fx:id="calculateButton" text="Calculate" onAction="#handleCalculate"/>
+    <Label fx:id="quantityLabel" text="Quantity:"/>
+    <TextField fx:id="quantityField" promptText="Quantity"/>
 
-    <Label fx:id="resultLabel" text="Total:"/>
+    <Button fx:id="addItemButton" text="Add Item" onAction="#handleAddItem"/>
+    <Button fx:id="calculateTotalButton" text="Calculate Total" onAction="#handleCalculateTotal"/>
 
+    <TextArea fx:id="cartDisplayArea" prefHeight="150" editable="false"/>
+    <Label fx:id="totalLabel" text="Total:"/>
 </VBox>

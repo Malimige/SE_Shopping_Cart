@@ -1,17 +1,10 @@
-# Use Maven image to build the application
-FROM maven:latest
+FROM maven:3.9.6-eclipse-temurin-17
 
-# Set working directory
 WORKDIR /app
 
-# Copy pom.xml first
-COPY pom.xml /app/
+COPY pom.xml .
+COPY src ./src
 
-# Copy all files
-COPY . /app/
+RUN mvn clean package -DskipTests
 
-# Build the project
-RUN mvn clean package
-
-# Run the app
 CMD ["java", "-jar", "target/shopping-cart-1.0-SNAPSHOT.jar"]
